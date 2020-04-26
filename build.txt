@@ -1,0 +1,9 @@
+author=John Bluefire
+version=0.0.2
+displayName = Gods have no mercy(Dark lord's story) -W.I.P.-
+homepage= 
+hideCode=true
+hideResources=true
+includeSource=false
+buildIgnore= *.csproj, *.user, obj\*, bin\*, .vs\*includePDB=true
+includePDB=true
