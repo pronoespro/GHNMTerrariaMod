@@ -14,7 +14,6 @@ namespace GodsHaveNoMercy.Items
         public override void SetDefaults()
         {
             item.maxStack = 666;
-            item.value = 10000;
             item.width = 32;
             item.height = 32;
             item.rare = 1;

@@ -61,7 +61,7 @@ namespace GodsHaveNoMercy.Items.Weapons
 
             return base.UseItem(player);
         }
-        /*
+
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
@@ -70,7 +70,7 @@ namespace GodsHaveNoMercy.Items.Weapons
             recipe.SetResult(this);
             recipe.AddRecipe();
         }
-        */
+
         public override bool AltFunctionUse(Player player)
         {
             return true;

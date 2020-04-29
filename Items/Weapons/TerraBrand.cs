@@ -113,7 +113,7 @@ namespace GodsHaveNoMercy.Items.Weapons
                 }
                 else
                 {
-                    item.shoot = ProjectileID.Fireball;
+                    item.shoot = ProjectileID.BallofFire;
                     item.useStyle = 4;
                     item.useTime = 30;
                     item.useAnimation = 30;
@@ -124,6 +124,7 @@ namespace GodsHaveNoMercy.Items.Weapons
 
             return base.CanUseItem(player);
         }
+
 
         public override void AddRecipes()
         {

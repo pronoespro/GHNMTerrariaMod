@@ -100,6 +100,22 @@ namespace GodsHaveNoMercy
             }
         }
 
+        public bool RecoverDarkness(int ammount)
+        {
+            if (TotalDarkness == MaxDarkness)
+                return false;
+
+            if (TotalDarkness + ammount > MaxDarkness)
+            {
+                TotalDarkness = MaxDarkness;
+            }
+            else
+            {
+                TotalDarkness += ammount;
+            }
+            return true;
+        }
+
         private void TP(NPC npc)
         {
             if (Main.projectile[tpProjectile].type == mod.ProjectileType("teleport_projectile"))
