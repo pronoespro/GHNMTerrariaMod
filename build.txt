@@ -1,5 +1,5 @@
 author=John Bluefire
-version=0.0.4
+version=0.0.5
 displayName = Gods have no mercy(Dark lord's story) -W.I.P.-
 homepage= 
 hideCode=true
