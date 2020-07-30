@@ -49,6 +49,7 @@ namespace GodsHaveNoMercy
                 darkUI.visible = true;
                 darknessInterface = new UserInterface();
                 darknessInterface.SetState(darkUI);
+                darkUI.Initialize();
             }
         }
 
@@ -58,6 +59,7 @@ namespace GodsHaveNoMercy
             useShadowReleaser = null;
             useShadowPunchDash = null;
             instance = null;
+            darkUI.Deactivate();
             base.Unload();
         }
 
@@ -67,7 +69,6 @@ namespace GodsHaveNoMercy
             
             Player player = Main.LocalPlayer;
             DarkPlayer myplayer = player.GetModPlayer<DarkPlayer>();
-            darkUI.Initialize();
             /*SpriteBatch sb = Main.spriteBatch;
             if (sb == null) { return true; }
             

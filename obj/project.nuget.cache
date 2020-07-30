@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "UMy2lLGdZtTM4UYX6GMjjtSmTalsPQD6PH9S0Pfy6syVq0f3Zq4faCCOpx8CT/QYcqjxY+w5gVPGYxW+kupWPQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\cesar\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\GodsHaveNoMercy\\GodsHaveNoMercy.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\cesar\\.nuget\\packages\\tmodloader.codeassist\\0.1.1\\tmodloader.codeassist.0.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}

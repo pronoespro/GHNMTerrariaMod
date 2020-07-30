@@ -42,6 +42,8 @@ namespace GodsHaveNoMercy
         int tpProjectile = 0;
         int reviveTime = 0;
 
+        float invencibilityFrames = 0;
+
         public override void UpdateBiomes()
         {
             ZoneHauntedMansion = (DarkWorld.HauntedMansion > 3);
@@ -129,7 +131,6 @@ namespace GodsHaveNoMercy
             apearedTimer = 6000;
         }
 
-
         public override bool PreKill(double damage, int hitDirection, bool pvp, ref bool playSound, ref bool genGore, ref PlayerDeathReason damageSource)
         {
 
@@ -139,6 +140,7 @@ namespace GodsHaveNoMercy
                 player.statLife = player.statLifeMax2;
                 player.HealEffect(player.statLifeMax2);
                 player.immune = true;
+                invencibilityFrames = player.longInvince ? 180 : 120;
                 player.immuneTime = player.longInvince ? 180 : 120;
                 for (int k = 0; k < player.hurtCooldowns.Length; k++)
                 {
@@ -156,6 +158,15 @@ namespace GodsHaveNoMercy
         {
             reviveTime = 0;
             base.Kill(damage, hitDirection, pvp, damageSource);
+        }
+
+        public override bool CanBeHitByNPC(NPC npc, ref int cooldownSlot)
+        {
+            return invencibilityFrames == 0;
+        }
+        public override bool CanBeHitByProjectile(Projectile proj)
+        {
+            return invencibilityFrames == 0;
         }
 
         public override void OnHitByNPC(NPC npc, int damage, bool crit)
@@ -247,6 +258,8 @@ namespace GodsHaveNoMercy
 
         public override void PreUpdate()
         {
+
+            invencibilityFrames -= (invencibilityFrames > 0) ? 1 : 0;
 
             DarknessUseTimer--;
             if (reviveTime > 0)

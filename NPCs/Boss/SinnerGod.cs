@@ -44,7 +44,7 @@ namespace GodsHaveNoMercy.NPCs.Boss
         public override void ScaleExpertStats(int numPlayers, float bossLifeScale)
         {
             npc.lifeMax = (int)(npc.lifeMax * 1.1f * bossLifeScale);
-            npc.damage = (int)(npc.damage * 0.55f);
+            npc.damage = (int)(npc.damage * 1.55f);
             npc.defense = (int)(npc.defense * numPlayers * 0.75f);
         }
 

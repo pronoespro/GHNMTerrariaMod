@@ -28,7 +28,7 @@ namespace GodsHaveNoMercy.Items.Weapons
             item.scale = .25f;
             item.noMelee = false;
             item.magic = true;
-            item.useStyle = 4;
+            item.useStyle = ItemUseStyleID.HoldingUp;
             item.value = Item.buyPrice(gold: 5, silver: 25);
             item.rare = 13;
             item.UseSound = SoundID.NPCHit1;
